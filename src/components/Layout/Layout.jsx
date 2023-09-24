@@ -39,6 +39,7 @@ const Layout = () => {
             ) : (
               <>
                 <StyledNavLink to="/register">Register</StyledNavLink>
+
                 <StyledNavLink to="/login">Login</StyledNavLink>
               </>
             )}

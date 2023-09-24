@@ -9,6 +9,8 @@ import { PrivateRoute } from '../PrivateRoute';
 import { refreshCurrentUser } from 'redux/auth/auth-operations';
 import { selectIsRefreshing } from 'redux/auth/auth-selectors';
 
+import { Title } from './App.styled';
+
 const HomeView = lazy(() => import('../../pages/HomeView'));
 const ContactsView = lazy(() => import('../../pages/ContactsView'));
 const RegisterView = lazy(() => import('../../pages/RegisterView'));
@@ -24,7 +26,7 @@ const App = () => {
   }, [dispatch]);
 
   return isRefreshing ? (
-    <b>Refreshing...</b>
+    <Title>Refreshing...</Title>
   ) : (
     <Routes>
       <Route path="/" element={<Layout />}>
